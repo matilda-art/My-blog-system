@@ -2,6 +2,7 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 
 public class FastJSONDemo {
+    
     public static void main(String[] args) {
         JSONObject object = new JSONObject();
         JSONObject author = new JSONObject();
