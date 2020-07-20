@@ -11,7 +11,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet("/")
+@WebServlet("")
 public class IndexServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -46,6 +46,7 @@ public class IndexServlet extends HttpServlet {
                 "        没有任何文章，请发表第一篇文章\n" +
                 "        <!-- 如果有文章 -->\n" +
                 "    </div>\n" +
+                "    <script src=\"/js/index.js\" charset=\"utf-8\"></script>" +
                 "</body>\n" +
                 "</html>";
         writer.println(htmlContent);

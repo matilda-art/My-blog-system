@@ -14,8 +14,8 @@ public class DBUtil {
         mysqlDataSource.setServerName("127.0.0.1");
         mysqlDataSource.setPort(3306);
         mysqlDataSource.setUser("root");
-        mysqlDataSource.setPassword("");
-        mysqlDataSource.setDatabaseName("hjb2_blog");
+        mysqlDataSource.setPassword("cardiac02200059");
+        mysqlDataSource.setDatabaseName("my_blog");
         mysqlDataSource.setCharacterEncoding("utf8");
         mysqlDataSource.setUseSSL(false);
 
