@@ -18,6 +18,7 @@ public class Article {
     public int id;
     public String title;
     public String publishedAt;
+    public String content;
 
     /*
     这么用 DateFormat 是错误的，因为是
@@ -79,6 +80,26 @@ public class Article {
             }
 
             return articleList;
+        }
+    }
+
+    public static Article get(int id) throws SQLException {
+        try (Connection c = DBUtil.getConnection()) {
+            String sql = "select title, content from articles where id = ?";
+            try (PreparedStatement s = c.prepareStatement(sql)) {
+                s.setInt(1, id);
+                try (ResultSet r = s.executeQuery()) {
+                    if (!r.next()) {
+                        return null;
+                    }
+
+                    Article article = new Article();
+                    article.title = r.getString("title");
+                    article.content = r.getString("content");
+
+                    return article;
+                }
+            }
         }
     }
 }

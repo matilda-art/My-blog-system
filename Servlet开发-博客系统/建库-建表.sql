@@ -1,5 +1,5 @@
-create database hjb2_blog charset utf8mb4;
-use hjb2_blog;
+create database my_blog charset utf8mb4;
+use my_blog;
 
 -- 用户表
 create table users (
