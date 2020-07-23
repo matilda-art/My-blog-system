@@ -15,3 +15,12 @@ create table articles (
   content text not null,
   published_at datetime not null
 );
+
+select
+  users.id author_id,
+  users.username author_username,
+  articles.id,
+  title,
+  published_at
+from articles join users on articles.user_id = users.id
+order by published_at desc;
